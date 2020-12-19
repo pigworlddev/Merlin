@@ -1,0 +1,5 @@
+name: Merlin
+version: ${project.version}
+main: me.pigworlddev.merlin.Merlin
+api-version: 1.16
+authors: [ ThePigStupo ]
