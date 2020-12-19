@@ -1,4 +1,4 @@
-package me.pigworlddev.merlin.events.joinleave;
+package me.pigworlddev.merlin.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class PlayerJoin implements Listener {
 
     @EventHandler
-    void PlayerJoin(PlayerJoinEvent e) {
+    void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         String displayName = player.getDisplayName();
 

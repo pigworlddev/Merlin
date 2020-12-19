@@ -1,9 +1,11 @@
 package me.pigworlddev.merlin;
 
-import me.pigworlddev.merlin.events.bed.PlayerJoinBed;
-import me.pigworlddev.merlin.events.bed.PlayerLeaveBed;
-import me.pigworlddev.merlin.events.joinleave.PlayerJoin;
-import me.pigworlddev.merlin.events.joinleave.PlayerLeave;
+import me.pigworlddev.merlin.commands.Feed;
+import me.pigworlddev.merlin.commands.God;
+import me.pigworlddev.merlin.events.PlayerJoin;
+import me.pigworlddev.merlin.events.PlayerJoinBed;
+import me.pigworlddev.merlin.events.PlayerLeave;
+import me.pigworlddev.merlin.events.PlayerLeaveBed;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Merlin extends JavaPlugin {
@@ -18,6 +20,8 @@ public final class Merlin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
 
         // Commands
+        getCommand("god").setExecutor(new God());
+        getCommand("feed").setExecutor(new Feed());
 
     }
 
