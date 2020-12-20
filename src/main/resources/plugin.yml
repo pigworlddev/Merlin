@@ -5,10 +5,43 @@ api-version: 1.16
 authors: [ ThePigStupo ]
 commands:
   god:
-    description: Makes you invincible
+    description: Makes you invulnerable
     aliases:
       - invulnerable
+    usage: /<command>
   feed:
     description: Hunger no longer
     aliases:
       - food
+    usage: /<command>
+  kill:
+    description: Kill yourself or a targeted player
+    aliases:
+      - murder
+    usage: /<command>
+  vault:
+    description: Opens a personal vault
+    usage: /<command>
+  fly:
+    description: Makes you able to fly
+    aliases:
+      - flight
+    usage: /<command>
+  rtp:
+    description: Randomly releports a player to a random location
+    usage: /<command>
+  vanish:
+    description: Vanish into nothing
+    usage: /<command>
+  tp:
+    description: Teleport players.
+    aliases:
+      - teleport
+  tpall:
+    description: Teleports all players to your location
+    aliases:
+      - tpallhere
+      - teleportallhere
+      - teleportall
+depend:
+  - PlaceholderAPI

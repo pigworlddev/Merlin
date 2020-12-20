@@ -8,41 +8,42 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+import org.jetbrains.annotations.NotNull;
 
-public class Feed implements CommandExecutor {
+public class Kill implements CommandExecutor {
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
         Plugin plugin = Merlin.getPlugin(Merlin.class);
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            String fedYourself = plugin.getConfig().getString("fedYourself");
+            String killedYourself = plugin.getConfig().getString("killedYourself");
             String missingPermission = plugin.getConfig().getString("missingPermission");
             String missingArgs = plugin.getConfig().getString("missingArgs");
-            String gettingFed = plugin.getConfig().getString("gettingKilledMSG");
-            String fedPlayer = plugin.getConfig().getString("fedPlayer");
+            String gettingKilledMSG = plugin.getConfig().getString("gettingKilledMSG");
+            String killedPlayer = plugin.getConfig().getString("killedPlayer");
 
             if (args.length == 0) {
 
-                if (player.hasPermission("merlin.feed")) {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', fedYourself));
-                    player.setFoodLevel(20);
+                if (player.hasPermission("merlin.kill")) {
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', killedYourself));
+                    player.setHealth(0);
                 } else {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', missingPermission));
                 }
 
             } else {
 
-                if (player.hasPermission("merlin.feed.others")) {
+                if (player.hasPermission("merlin.kill.others")) {
                     Player target = Bukkit.getPlayerExact(args[0]);
 
                     if (target instanceof Player) {
 
-                        target.sendMessage(ChatColor.translateAlternateColorCodes('&', gettingFed));
-                        target.setFoodLevel(20);
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', fedPlayer));
+                        target.sendMessage(ChatColor.translateAlternateColorCodes('&', gettingKilledMSG));
+                        target.setHealth(0);
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', killedPlayer));
 
                     } else {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', missingArgs));

@@ -1,0 +1,36 @@
+########## Merlin Configuration ##########
+###### PlaceholderAPI is supported #######
+######## Color prefix is & ###############
+##########################################
+
+missingPermission: 'You are missing permissions to do that!' ## Creator's note: This does not apply only to commands.
+missingArgs: 'Missing arguments'
+
+joinMessage: '%player_name% has joined the server.'
+quitMessage: '%player_name% has left us.'
+
+playerEnterBedMessage: 'Good night, %player_name%'
+playerBedExitMessage: 'Good morning, %player_name%'
+
+noLongerInvulnerable: 'You are no longer invulnerable'
+nowInvulnerable: 'You are now invulnerable'
+
+killedYourself: 'You just killed yourself.'
+gettingKilledMSG: 'You just got killed.'
+killedPlayer: 'You just killed another player.'
+
+fedYourself: 'You just fed yourself'
+gettingFedMSG: 'You are getting fed'
+fedPlayer: 'You just fed a player, good job!'
+
+vaultName: 'This vault belongs to: %player_name%'
+
+nowFlyingMSG: 'You are now flying!'
+nowNotFlyingMSG: 'You are no longer flying.'
+
+world-border: true # True if you want to limit how far players teleport with /rtp, False if you want to have it at 250000 ( for lag reasons )
+border: 2000
+
+noLongerVanish: 'You are now visible to other players on the server'
+nowVanish: 'You are now invisible to other players on the server'
+
