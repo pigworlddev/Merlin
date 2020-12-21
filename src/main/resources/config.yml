@@ -5,6 +5,14 @@
 
 missingPermission: 'You are missing permissions to do that!' ## Creator's note: This does not apply only to commands.
 missingArgs: 'Missing arguments'
+# Enable MOTD message
+motd: true
+# Set the MOTD message
+motd-message:
+  - 'Welcome to the server'
+  - 'Hello!'
+  - 'Your name is %player_name'
+
 
 joinMessage: '%player_name% has joined the server.'
 quitMessage: '%player_name% has left us.'
@@ -33,4 +41,5 @@ border: 2000
 
 noLongerVanish: 'You are now visible to other players on the server'
 nowVanish: 'You are now invisible to other players on the server'
+
 
